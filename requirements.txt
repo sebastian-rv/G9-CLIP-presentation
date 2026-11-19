@@ -1,0 +1,6 @@
+# Tested with Python 3.14 (CPU only)
+torch==2.15.0
+transformers==5.23.0
+numpy==2.5.5
+matplotlib==3.11.2
+pillow==13.0.0
