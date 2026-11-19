@@ -46,10 +46,10 @@ def make_split(captions, seen, held_out, seed=2026):
 def audience_question(image, labels):
     fig, ax = plt.subplots(1, 2, figsize=(12, 4.5), gridspec_kw={"width_ratios": [1, 1.1]})
     ax[0].imshow(image); ax[0].axis("off"); ax[1].axis("off")
-    ax[1].text(0, 0.9, "Which caption matches best?", fontsize=20, weight="bold")
+    ax[1].text(0, 0.9, "Which caption will CLIP pick?", fontsize=20, weight="bold")
     for k, lab in enumerate(labels):
         ax[1].text(0.02, 0.65 - 0.17 * k, f"{'ABC'[k]})  “{lab}”", fontsize=17)
-    ax[1].text(0, 0.05, "Guess the probability of each one!", fontsize=13, style="italic", color="gray")
+    ax[1].text(0, 0.05, "Guess the probability CLIP will give each one!", fontsize=13, style="italic", color="gray")
     plt.tight_layout(); plt.savefig("figures/A_audience_question.png", dpi=200); plt.show()
 
 def audience_reveal(image, labels, probs, logits):
